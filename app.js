@@ -61,7 +61,7 @@ app.post("/register", async (request, response) => {
   }
 });
 
-app.post("/login", async (request, response) => {
+app.post("/api/login", async (request, response) => {
   const { email, password } = request.body;
   const userfind = JSON.parse(
     JSON.stringify(await users.findAll({ where: { email } }))
